@@ -4,8 +4,17 @@ Materi hands-on **IMV Laboratory**. Repositori ini menggabungkan dua notebook (*
  
 | File | Dipakai untuk | Kamera |
 |---|---|---|
-| `hand_tracking_mediapipe_lokal.ipynb` | Jupyter / VS Code di komputer sendiri | Webcam real-time (`cv2.imshow`) |
-| `hand_tracking_mediapipe_colab.ipynb` | Google Colab | Foto (upload / kamera browser), video upload, atau simulasi gesture |
+| `src/hand_tracking_mediapipe_lokal.ipynb` | Jupyter / VS Code di komputer sendiri | Webcam real-time (`cv2.imshow`) |
+| `src/hand_tracking_mediapipe_colab.ipynb` | Google Colab | Foto (upload / kamera browser), video upload, atau simulasi gesture |
+
+Bahan per topik yang sudah digabung ke notebook di atas, disimpan sebagai arsip:
+
+| File | Isi |
+|---|---|
+| `notebooks/hands_on_landmark_mediapipe.ipynb` | Konsep landmark dan pembacaan koordinat |
+| `notebooks/hand_tracking.ipynb` | Hand tracking, Virtual Painter, Volume Control (lokal) |
+| `notebooks/hand_tracking_colab.ipynb` | Hand tracking, Virtual Painter, Volume Control (Colab) |
+| `assets/module03_reference.xlsx` | Referensi materi modul 3 |
  
 ---
  
@@ -66,7 +75,7 @@ Materi hands-on **IMV Laboratory**. Repositori ini menggabungkan dua notebook (*
  
 ```bash
 mkdir hand-tracking && cd hand-tracking
-# salin kedua file .ipynb dan README.md ke folder ini
+# salin src/hand_tracking_mediapipe_lokal.ipynb ke folder ini
 ```
  
 ### 3.2 Buat virtual environment
@@ -93,6 +102,11 @@ python --version
  
 ```bash
 python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+`requirements.txt` ada di root repo. Kalau notebook disalin ke folder lain, install manual:
+```bash
 pip install opencv-python mediapipe==0.10.21 numpy matplotlib jupyter ipykernel
 ```
  

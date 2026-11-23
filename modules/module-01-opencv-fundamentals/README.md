@@ -4,6 +4,7 @@ Modul praktikum study group **IMV Laboratory** untuk pemrosesan citra digital de
 
 ## Daftar Isi
 
+1. [Daftar File](#daftar-file)
 1. [Tujuan Pembelajaran](#tujuan-pembelajaran)
 2. [Struktur Materi](#struktur-materi)
 3. [Prasyarat](#prasyarat)
@@ -18,6 +19,22 @@ Modul praktikum study group **IMV Laboratory** untuk pemrosesan citra digital de
 12. [Referensi Fungsi Utama](#referensi-fungsi-utama)
 
 ---
+
+## Daftar File
+
+| File | Isi |
+|---|---|
+| `src/opencv_fundamentals_lokal.ipynb` | Notebook gabungan, versi lokal (VSCode / Jupyter) |
+| `src/opencv_fundamentals_colab.ipynb` | Notebook gabungan, versi Google Colab |
+| `notebooks/hands_on_color_space_chroma_key.ipynb` | Bahan per topik: color space dan chroma key (lokal) |
+| `notebooks/hands_on_color_space_chroma_key_colab.ipynb` | Bahan per topik: color space dan chroma key (Colab) |
+| `notebooks/hands_on_filtering_edge_detection.ipynb` | Bahan per topik: filtering dan edge detection |
+| `notebooks/hands_on_kamera.ipynb` | Bahan per topik: filtering, edge detection, dan hapus background dengan kamera |
+| `notebooks/h2hjuun.jpg` | Gambar contoh untuk Bagian 2 dan 3 |
+| `notebooks/hasil_tanpa_background.png` | Contoh hasil PNG transparan |
+| `assets/module01_reference.xlsx` | Referensi materi modul 1 |
+
+Untuk praktikum pakai notebook di `src/`. Notebook di `notebooks/` adalah bahan per topik yang sudah digabung ke `src/`.
 
 ## Tujuan Pembelajaran
 
@@ -87,7 +104,7 @@ Perbaikan hasil chroma key yang kasar (bintik noise dan tepi bergerigi) memakai 
 
 ```bash
 mkdir imv-handson && cd imv-handson
-# salin kedua file .ipynb dan README.md ke folder ini
+# salin src/opencv_fundamentals_lokal.ipynb ke folder ini
 
 python -m venv .venv
 ```
@@ -109,23 +126,14 @@ source .venv/bin/activate
 
 ```bash
 pip install --upgrade pip
-pip install numpy opencv-python matplotlib scikit-image numba
-pip install ipykernel jupyter
+pip install -r requirements.txt
 ```
 
-Atau simpan sebagai `requirements.txt`:
+`requirements.txt` ada di root repo. Kalau kamu menyalin notebook ke folder lain, salin juga file itu, atau install manual:
 
-```text
-numpy
-opencv-python
-matplotlib
-scikit-image
-numba
-ipykernel
-jupyter
+```bash
+pip install numpy opencv-python matplotlib scikit-image numba ipykernel jupyter
 ```
-
-lalu jalankan `pip install -r requirements.txt`.
 
 > Jangan menginstal `opencv-python` dan `opencv-python-headless` bersamaan. Versi headless tidak punya GUI sehingga `cv2.imshow` (live chroma key) tidak akan bekerja.
 
@@ -133,7 +141,7 @@ lalu jalankan `pip install -r requirements.txt`.
 
 1. Install ekstensi **Python** dan **Jupyter** dari Marketplace VSCode.
 2. Buka folder `imv-handson` (`File > Open Folder`).
-3. Buka `IMV_HandsOn_Gabungan_Lokal.ipynb`.
+3. Buka `opencv_fundamentals_lokal.ipynb`.
 4. Klik **Select Kernel** di pojok kanan atas, pilih interpreter `.venv` yang tadi dibuat.
 5. Jalankan sel pertama untuk memeriksa. Keluaran yang benar:
 
@@ -150,7 +158,7 @@ numba tersedia: True
 
 ## Setup Versi Google Colab
 
-1. Buka [colab.research.google.com](https://colab.research.google.com), pilih **File > Upload notebook**, unggah `IMV_HandsOn_Gabungan_Colab.ipynb`. (Atau unggah ke Google Drive lalu buka dengan Colab.)
+1. Buka [colab.research.google.com](https://colab.research.google.com), pilih **File > Upload notebook**, unggah `opencv_fundamentals_colab.ipynb`. (Atau unggah ke Google Drive lalu buka dengan Colab.)
 2. Pilih runtime Python biasa (CPU sudah cukup; GPU tidak diperlukan).
 3. Jalankan sel dari atas ke bawah (`Runtime > Run all`, atau `Shift+Enter` per sel).
 
@@ -256,7 +264,7 @@ Di Colab, untuk mengunduh PNG ke komputer, hapus tanda `#` pada baris `files.dow
 | Sel konvolusi sangat lambat | `numba` tidak ada, atau gambar terlalu besar | Install `numba`; pastikan gambar lewat `resize_max` (maks 256 piksel) |
 | GrabCut memotong salah | `rect` tidak melingkupi objek | Ubah pecahan pada `rect = (int(0.15*w), int(0.02*h), int(0.70*w), int(0.96*h))` |
 | `cv2.error` pada `findContours` / `max()` of empty | Canny tidak menemukan tepi | Turunkan threshold Canny, atau kurangi blur |
-| `files.upload()` / `take_photo()` tidak jalan | Memakai notebook versi lokal di Colab | Gunakan `IMV_HandsOn_Gabungan_Colab.ipynb` |
+| `files.upload()` / `take_photo()` tidak jalan | Memakai notebook versi lokal di Colab | Gunakan `opencv_fundamentals_colab.ipynb` |
 | Webcam browser Colab tidak muncul | Izin kamera browser ditolak | Izinkan kamera untuk `colab.research.google.com` pada pengaturan situs browser |
 
 ## Studi Kasus (Bagian 4)

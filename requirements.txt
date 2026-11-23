@@ -1,0 +1,28 @@
+# Study Group IMV Laboratory 2026
+# Dependensi untuk menjalankan semua notebook versi lokal.
+# Python 3.9 - 3.12 (batas dari mediapipe==0.10.21).
+#
+#   pip install -r requirements.txt
+#
+# Jangan pasang opencv-python-headless bersamaan dengan opencv-python:
+# versi headless tidak punya GUI, jadi cv2.imshow tidak akan jalan.
+
+# Inti
+numpy
+opencv-python
+matplotlib
+
+# Modul 1: filtering, edge detection, hapus background
+scikit-image
+numba            # opsional, mempercepat loop konvolusi manual
+
+# Modul 3: hand tracking
+mediapipe==0.10.21
+
+# Jupyter
+jupyter
+ipykernel
+
+# Opsional, hanya Windows: kontrol volume sistem sungguhan (Modul 3)
+# pycaw
+# comtypes
