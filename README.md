@@ -48,16 +48,13 @@ IMV-OpenCV-Training/
 │       ├── exercises/
 │       └── assets/
 │
-├── opening-demo/
-│   ├── README.md
-│   ├── src/
-│   ├── effects/
-│   └── assets/
-│
-└── tutorials/
-    ├── 01-installation/
-    ├── 02-python-venv/
-    └── 03-library-setup/
+└── opening-demo/
+    ├── README.md
+    ├── src/
+    ├── effects/
+    └── assets/
+
+
 ```
 ```
 Folder	Fungsi
