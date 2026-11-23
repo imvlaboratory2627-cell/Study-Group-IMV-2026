@@ -1,8 +1,4 @@
 # Modul 2 — Study Group IMV
-## Face Detection & Landmark
-
-Catatan lengkap dari slide Canva "face — Presentation" (Modul 2, 32 halaman). Fokus: dari **gambar = angka** → deteksi wajah dengan Haar Cascade → landmark 68 titik dlib → aplikasi (MAR, filter mata, alpha blending) → latih model sendiri.
-
 ---
 
 ## Daftar Isi
