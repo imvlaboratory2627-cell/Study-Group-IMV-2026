@@ -67,5 +67,4 @@ src/	          Source code utama
 exercises/	    Tugas dan starter code peserta
 assets/	        Gambar, video pendek, dan aset pendukung
 opening-demo/	  Program demo gabungan
-tutorials/	    Video dan panduan persiapan
 ```
