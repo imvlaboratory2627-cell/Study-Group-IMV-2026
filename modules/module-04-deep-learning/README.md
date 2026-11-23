@@ -1,10 +1,6 @@
 # Modul 4 — Study Group IMV
 ## Deep Learning & Object Detection (CNN + YOLO)
-
-Catatan lengkap dari slide Canva "Modul 4 Study Group_DL — Presentation" (22 halaman). Fokus: **arsitektur CNN**, **deteksi objek YOLO**, **alur pelatihan data**, dan **strategi fine-tuning model**.
-
 ---
-
 ## Daftar Isi
 
 1. [Deep Learning & Object Detection: Pengantar](#1-deep-learning--object-detection-pengantar)
