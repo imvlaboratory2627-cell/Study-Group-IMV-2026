@@ -48,16 +48,13 @@ IMV-OpenCV-Training/
 │       ├── exercises/
 │       └── assets/
 │
-├── opening-demo/
-│   ├── README.md
-│   ├── src/
-│   ├── effects/
-│   └── assets/
-│
-└── tutorials/
-    ├── 01-installation/
-    ├── 02-python-venv/
-    └── 03-library-setup/
+└── opening-demo/
+    ├── README.md
+    ├── src/
+    ├── effects/
+    └── assets/
+
+
 ```
 ```
 Folder	Fungsi
@@ -70,5 +67,4 @@ src/	          Source code utama
 exercises/	    Tugas dan starter code peserta
 assets/	        Gambar, video pendek, dan aset pendukung
 opening-demo/	  Program demo gabungan
-tutorials/	    Video dan panduan persiapan
 ```
